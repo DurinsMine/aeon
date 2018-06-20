@@ -58,7 +58,7 @@
 
 #define NET_MAKE_IP(b1,b2,b3,b4)  ((LPARAM)(((DWORD)(b1)<<24)+((DWORD)(b2)<<16)+((DWORD)(b3)<<8)+((DWORD)(b4))))
 
-#define MIN_WANTED_SEED_NODES 6
+#define MIN_WANTED_SEED_NODES 12
 
 namespace nodetool
 {
@@ -371,21 +371,22 @@ namespace nodetool
     std::set<std::string> full_addrs;
     if (nettype == cryptonote::TESTNET)
     {
-      full_addrs.insert("54.37.159.163:21180");
+      full_addrs.insert("162.210.173.150:21180");
+      full_addrs.insert("162.210.173.151:21180");
+      full_addrs.insert("74.91.23.186:21180");
+      full_addrs.insert("192.187.114.114:21180");
     }
     else if (nettype == cryptonote::STAGENET)
     {
-      full_addrs.insert("54.37.159.163:31180");
+      full_addrs.insert("162.210.173.150:31180");
+      full_addrs.insert("162.210.173.151:31180");
+      full_addrs.insert("74.91.23.186:31180");
+      full_addrs.insert("192.187.114.114:31180");
     }
     else
     {
-      full_addrs.insert("54.37.159.163:11000");
-      full_addrs.insert("54.37.159.163:12000");
-      full_addrs.insert("54.37.159.163:13000");
-      full_addrs.insert("54.38.78.18:11000");
-      full_addrs.insert("54.38.78.18:12000");
-      full_addrs.insert("54.38.78.18:13000");
-  
+      full_addrs.insert("74.91.23.186:11180");
+      full_addrs.insert("192.187.114.114:11180");
     }
     return full_addrs;
   }
@@ -1914,7 +1915,7 @@ namespace nodetool
   template<class t_payload_net_handler>
   bool node_server<t_payload_net_handler>::has_too_many_connections(const epee::net_utils::network_address &address)
   {
-    const size_t max_connections = 3;
+    const size_t max_connections = 1;
     size_t count = 0;
 
     m_net_server.get_config_object().foreach_connection([&](const p2p_connection_context& cntxt)

@@ -35,7 +35,7 @@
 
 #define CRYPTONOTE_DNS_TIMEOUT_MS                       20000
 
-#define HARDFORK_1_HEIGHT                               1
+#define HARDFORK_1_HEIGHT                               592000
 #define HARDFORK_1_POW_SPEED_MULTIPLIER                 2
 #define HARDFORK_1_DIFFADJ                              HARDFORK_1_POW_SPEED_MULTIPLIER
 #define HARDFORK_1_DIFFADJ_WINDOW                       360
@@ -123,7 +123,7 @@
 
 #define ALLOW_DEBUG_COMMANDS
 
-#define CRYPTONOTE_NAME                         "durins"
+#define CRYPTONOTE_NAME                         "aeon"
 #define CRYPTONOTE_POOLDATA_FILENAME            "poolstate.bin"
 #define CRYPTONOTE_BLOCKCHAINDATA_FILENAME      "data.mdb"
 #define CRYPTONOTE_BLOCKCHAINDATA_LOCK_FILENAME "lock.mdb"
@@ -158,12 +158,12 @@ namespace config
   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0xB2;                // starts with "Wm"
   uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x2733;   // starts with "Wz"
   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x06B8;           // starts with "Xn"
-  uint16_t const P2P_DEFAULT_PORT = 11000;
-  uint16_t const RPC_DEFAULT_PORT = 11001;
-  uint16_t const ZMQ_RPC_DEFAULT_PORT = 11002;
+  uint16_t const P2P_DEFAULT_PORT = 11180;
+  uint16_t const RPC_DEFAULT_PORT = 11181;
+  uint16_t const ZMQ_RPC_DEFAULT_PORT = 11182;
   boost::uuids::uuid const NETWORK_ID = { {
-      0x32 ,0x32, 0xF3, 0x91 , 0x81, 0x18 , 0x41, 0x61, 0x17, 0x31, 0x00, 0x82, 0x16, 0xA1, 0x1A, 0x10
-    } }; 
+      0x32 ,0x32, 0xF3, 0x91 , 0x81, 0x18 , 0x41, 0x61, 0x17, 0x31, 0x00, 0x82, 0x16, 0xA1, 0xA1, 0x10
+    } }; // Bender's nightmare
   std::string const GENESIS_TX = "013c01ff0001ffffffffffff03029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121012bf2d282da90cee9c7a28c16e81418101ee28607d9e50f706594ee144a453b68";
   uint32_t const GENESIS_NONCE = 10000;
 
@@ -172,13 +172,13 @@ namespace config
     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x0426;              // starts with "Um"
     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x2C27;   // starts with "Uz"
     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x0AAC;           // starts with "Vn"
-    uint16_t const P2P_DEFAULT_PORT = 11100;
-    uint16_t const RPC_DEFAULT_PORT = 11101;
-    uint16_t const ZMQ_RPC_DEFAULT_PORT = 11102;
+    uint16_t const P2P_DEFAULT_PORT = 21180;
+    uint16_t const RPC_DEFAULT_PORT = 21181;
+    uint16_t const ZMQ_RPC_DEFAULT_PORT = 21182;
     boost::uuids::uuid const NETWORK_ID = { {
-        0x32 ,0x32, 0xF3, 0x91 , 0x81, 0x18 , 0x41, 0x61, 0x17, 0x31, 0x00, 0x82, 0x16, 0xA1, 0x1A, 0x11
-      } }; 
-    std::string const GENESIS_TX = "";
+        0x32 ,0x32, 0xF3, 0x91 , 0x81, 0x18 , 0x41, 0x61, 0x17, 0x31, 0x00, 0x82, 0x16, 0xA1, 0xA1, 0x11
+      } }; // Bender's daydream
+    std::string const GENESIS_TX = "013c01ff0001ffffffffffff03029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210102711ad6274bcf3fa49cf5a99ec02fd3bbfef2dc64fc388df55e7ed8dc310a6f";
     uint32_t const GENESIS_NONCE = 10001;
   }
 
@@ -187,13 +187,13 @@ namespace config
     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x011A;              // starts with "Sm"
     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x2C1B;   // starts with "Sz"
     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x0B20;           // starts with "Tn"
-    uint16_t const P2P_DEFAULT_PORT = 11110;
-    uint16_t const RPC_DEFAULT_PORT = 11111;
-    uint16_t const ZMQ_RPC_DEFAULT_PORT = 11112;
+    uint16_t const P2P_DEFAULT_PORT = 31180;
+    uint16_t const RPC_DEFAULT_PORT = 31181;
+    uint16_t const ZMQ_RPC_DEFAULT_PORT = 31182;
     boost::uuids::uuid const NETWORK_ID = { {
-        0x32 ,0x32, 0xF3, 0x91 , 0x81, 0x18 , 0x41, 0x61, 0x17, 0x31, 0x00, 0x82, 0x16, 0xA1, 0x1A, 0x12
-      } }; 
-    std::string const GENESIS_TX = "";
+        0x32 ,0x32, 0xF3, 0x91 , 0x81, 0x18 , 0x41, 0x61, 0x17, 0x31, 0x00, 0x82, 0x16, 0xA1, 0xA1, 0x12
+      } }; // Bender's daydream
+    std::string const GENESIS_TX = "013c01ff0001ffffffffffff0302c54039027b245ae1de97344b5fadd4e3cd01351a0be40579851f565eb885204321015c1d22ecd66bdbf49c80bedf15c72040d059f80a312a85c696841ea8ee53ca34";
     uint32_t const GENESIS_NONCE = 10002;
   }
 }
