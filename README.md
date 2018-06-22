@@ -229,7 +229,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 ```
         git clone https://github.com/durinsmine/durinscoin.git
 	cd durinscoin
-	git checkout tags/v0.12.1.3
+	git checkout tags/v0.12.2.0
 ```
 * Build:
 ```
